@@ -38,7 +38,9 @@ app.get("/clothes", (req, res) => {
 
     const result = jsonData.items.slice(start, end);
 
-    res.status(200).json({
+    res
+    .status(200)
+    .json({
       items: result,
       total: jsonData.items.length,
       page,
